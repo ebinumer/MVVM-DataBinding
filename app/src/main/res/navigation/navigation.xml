@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment android:id="@+id/home_fragment"
+        tools:layout="@layout/home_page"
+        android:name="com.ebinumer.test.ui.HomeFragment"
+        >
+        <action
+            android:id="@+id/action_home_fragment_to_detail_page"
+            app:destination="@id/detail_page"
+            >
+<!--            <argument android:name="item_data"-->
+<!--                app:argType="com.ebinumer.test.data.LstItemDataModel"-->
+<!--                />-->
+        </action>
+    </fragment>
+    <fragment android:id="@+id/detail_page"
+        android:name="com.ebinumer.test.ui.ItemDetailFragment"
+        tools:layout="@layout/item_detail_page"
+        >
+
+
+        <action
+            android:id="@+id/action_detail_page_to_home_fragment"
+            app:destination="@id/home_fragment" />
+    </fragment>
+
+
+</navigation>
